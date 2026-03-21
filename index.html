@@ -8,19 +8,16 @@
   <style>
     :root {
       --navy: #0c2d68;
-      --navy-dark: #081d45;
       --orange: #f29a38;
       --orange-dark: #de8521;
       --bg: #f5f9ff;
-      --card: #ffffff;
       --text: #1c2333;
       --muted: #5f6b7a;
-      --shadow: 0 10px 25px rgba(0,0,0,0.10);
-      --radius: 18px;
-      --max: 1120px;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
@@ -40,49 +37,69 @@
     }
 
     .container {
-      width: min(calc(100% - 32px), var(--max));
-      margin: 0 auto;
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
     }
 
     .hero {
-      min-height: 90vh;
-      background: url("images/hero-bg.jpg") center/cover no-repeat;
-      position: relative;
+      min-height: 92vh;
+      background:
+        linear-gradient(to bottom, rgba(8,29,69,0.18), rgba(8,29,69,0.38)),
+        url("images/hero-bg.jpg") center/cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      color: #fff;
-      overflow: hidden;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.45);
+      color: white;
+      position: relative;
+      padding: 30px 0;
     }
 
     .hero-content {
       position: relative;
       z-index: 1;
-      width: min(calc(100% - 32px), 900px);
-      padding: 40px 0 80px;
+      max-width: 900px;
+      padding: 40px 20px 70px;
+    }
+
+    .hero-logo {
+      width: 180px;
+      max-width: 60%;
+      margin: 0 auto 20px;
+      display: block;
+      filter: drop-shadow(0 8px 18px rgba(0,0,0,0.25));
+    }
+
+    .hero-tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.35);
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: .4px;
+      margin-bottom: 20px;
+      backdrop-filter: blur(4px);
     }
 
     .hero h1 {
-      margin: 0 0 14px;
-      font-size: clamp(2.6rem, 6vw, 5rem);
-      line-height: 1.02;
-      font-weight: 700;
+      font-size: clamp(3rem, 7vw, 5.6rem);
+      line-height: .95;
+      margin: 0 0 16px;
+      font-weight: 800;
+      text-shadow: 0 6px 22px rgba(0,0,0,.18);
     }
 
     .hero p {
-      margin: 0 auto 28px;
-      max-width: 720px;
-      font-size: clamp(1rem, 2vw, 1.3rem);
+      font-size: clamp(1.1rem, 2.3vw, 1.45rem);
       line-height: 1.5;
-      color: rgba(255,255,255,0.95);
+      max-width: 720px;
+      margin: 0 auto 28px;
+      color: rgba(255,255,255,.96);
+      text-shadow: 0 3px 14px rgba(0,0,0,.12);
     }
 
     .hero-buttons {
@@ -93,17 +110,18 @@
     }
 
     .btn {
-      display: inline-block;
-      padding: 14px 24px;
+      padding: 15px 24px;
       border-radius: 999px;
-      font-weight: bold;
-      transition: 0.2s ease;
-      box-shadow: var(--shadow);
+      font-weight: 800;
+      margin: 5px;
+      display: inline-block;
+      transition: .2s ease;
     }
 
     .btn-primary {
       background: var(--orange);
-      color: #fff;
+      color: white;
+      box-shadow: 0 10px 24px rgba(242,154,56,.28);
     }
 
     .btn-primary:hover {
@@ -111,137 +129,117 @@
     }
 
     .btn-secondary {
-      background: rgba(255,255,255,0.12);
-      color: #fff;
-      border: 2px solid rgba(255,255,255,0.75);
-    }
-
-    .btn-secondary:hover {
-      background: rgba(255,255,255,0.2);
+      border: 2px solid rgba(255,255,255,.85);
+      color: white;
+      background: rgba(255,255,255,.06);
+      backdrop-filter: blur(4px);
     }
 
     .section {
-      padding: 64px 0;
+      padding: 60px 0;
+      text-align: center;
     }
 
     .section h2 {
-      text-align: center;
-      margin: 0 0 10px;
-      font-size: clamp(2rem, 4vw, 3rem);
-      color: var(--navy-dark);
+      font-size: 32px;
+      margin-bottom: 10px;
+      color: var(--navy);
     }
 
-    .section p.lead {
-      text-align: center;
-      margin: 0 auto 32px;
-      max-width: 700px;
+    .section p {
       color: var(--muted);
-      line-height: 1.6;
-      font-size: 1.05rem;
+      margin-bottom: 30px;
     }
 
-    .grid-2 {
+    .grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
+      gap: 20px;
     }
 
     .card {
-      background: var(--card);
-      border-radius: var(--radius);
+      position: relative;
       overflow: hidden;
-      box-shadow: var(--shadow);
-      transition: transform 0.2s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
+      border-radius: 16px;
     }
 
     .card img {
-      height: 220px;
+      height: 230px;
       object-fit: cover;
+      border-radius: 16px;
     }
 
-    .card-content {
-      padding: 18px;
-    }
-
-    .card h3 {
-      margin: 0 0 8px;
-      color: var(--navy);
-      font-size: 1.35rem;
-    }
-
-    .card p {
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.5;
-      font-size: 0.98rem;
-    }
-
-    .category-card {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .category-card img {
-      height: 240px;
-      object-fit: cover;
-    }
-
-    .category-overlay {
+    .overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(to top, rgba(8,29,69,0.78), rgba(8,29,69,0.15));
+      background: linear-gradient(to top, rgba(0,0,0,0.68), transparent);
       display: flex;
       align-items: flex-end;
-      padding: 18px;
+      padding: 20px;
+      color: white;
+      border-radius: 16px;
     }
 
-    .category-overlay div {
-      color: #fff;
-    }
-
-    .category-overlay h3 {
-      margin: 0 0 6px;
-      color: #fff;
-      font-size: 1.45rem;
-    }
-
-    .category-overlay p {
+    .overlay h3 {
       margin: 0;
-      color: rgba(255,255,255,0.92);
-      font-size: 0.98rem;
-      line-height: 1.4;
+      font-size: 22px;
     }
 
-    .footer-space {
-      height: 30px;
+    .overlay p {
+      margin: 5px 0 0;
+      font-size: 14px;
+      color: white;
     }
 
-    @media (max-width: 800px) {
-      .grid-2 {
-        grid-template-columns: 1fr;
-      }
+    .trend-card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      text-align: left;
+      box-shadow: 0 10px 24px rgba(0,0,0,.08);
+    }
 
-      .hero {
-        min-height: 82vh;
-      }
+    .trend-card img {
+      height: 200px;
+      object-fit: cover;
+      border-radius: 0;
+    }
 
-      .card img,
-      .category-card img {
-        height: 210px;
+    .trend-content {
+      padding: 15px;
+    }
+
+    .trend-content h3 {
+      margin: 0 0 5px;
+      color: var(--navy);
+    }
+
+    .trend-content p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    @media (min-width: 768px) {
+      .grid {
+        grid-template-columns: repeat(2,1fr);
       }
     }
   </style>
 </head>
+
 <body>
 
   <section class="hero">
     <div class="hero-content">
-      <h1>Everything fun in Sandusky</h1>
-      <p>On the water, family fun, nightlife, and attractions — all in one place.</p>
+      <img src="images/fundusky-logo.png" alt="FUNdusky logo" class="hero-logo">
+
+      <div class="hero-tag">Lake Erie • Cedar Point • Real Local Fun</div>
+
+      <h1>FUN<br>starts here.</h1>
+
+      <p>
+        Jet skis, boat rentals, nightlife, family fun, and the best of Sandusky — all in one place.
+      </p>
+
       <div class="hero-buttons">
         <a href="#categories" class="btn btn-primary">Browse Activities</a>
         <a href="#trending" class="btn btn-secondary">See What’s Trending</a>
@@ -252,45 +250,45 @@
   <section class="section" id="categories">
     <div class="container">
       <h2>Explore by Category</h2>
-      <p class="lead">Choose what kind of day you want to have — from jet skis and boats to bowling, bars, and Cedar Point.</p>
+      <p>Choose what kind of day you want to have.</p>
 
-      <div class="grid-2">
-        <a href="water.html" class="card category-card">
-          <img src="images/boat.PNG" alt="On the Water" />
-          <div class="category-overlay">
+      <div class="grid">
+        <a href="water.html" class="card">
+          <img src="images/boat.PNG" alt="On the Water">
+          <div class="overlay">
             <div>
               <h3>On the Water</h3>
-              <p>Jet skis, boat rentals, sunset cruises, and more.</p>
+              <p>Jet skis, boats, sunset cruises</p>
             </div>
           </div>
         </a>
 
-        <a href="family.html" class="card category-card">
-          <img src="images/family.jpg" alt="Family Fun" />
-          <div class="category-overlay">
+        <a href="family.html" class="card">
+          <img src="images/family.jpg" alt="Family Fun">
+          <div class="overlay">
             <div>
               <h3>Family Fun</h3>
-              <p>Bowling, go-karts, putt putt, and activities for everyone.</p>
+              <p>Bowling, go-karts, putt putt</p>
             </div>
           </div>
         </a>
 
-        <a href="nightlife.html" class="card category-card">
-          <img src="images/nightlife.jpg" alt="Nightlife" />
-          <div class="category-overlay">
+        <a href="nightlife.html" class="card">
+          <img src="images/nightlife.jpg" alt="Nightlife">
+          <div class="overlay">
             <div>
               <h3>Nightlife</h3>
-              <p>Bars, live music, late nights, and packed rooms.</p>
+              <p>Bars, music, packed rooms</p>
             </div>
           </div>
         </a>
 
-        <a href="attractions.html" class="card category-card">
-          <img src="images/attractions.jpg" alt="Attractions" />
-          <div class="category-overlay">
+        <a href="attractions.html" class="card">
+          <img src="images/attractions.jpg" alt="Attractions">
+          <div class="overlay">
             <div>
               <h3>Attractions</h3>
-              <p>Cedar Point and the can’t-miss Sandusky experience.</p>
+              <p>Cedar Point & must-see spots</p>
             </div>
           </div>
         </a>
@@ -301,29 +299,27 @@
   <section class="section" id="trending">
     <div class="container">
       <h2>Trending Right Now</h2>
-      <p class="lead">The stuff people actually want to do when they get here.</p>
+      <p>The stuff people actually want to do when they get here.</p>
 
-      <div class="grid-2">
-        <a href="water.html" class="card">
-          <img src="images/jetski.jpg" alt="Jet Ski Rentals" />
-          <div class="card-content">
+      <div class="grid">
+        <a href="water.html" class="trend-card">
+          <img src="images/jetski.jpg" alt="Jet Ski Rentals">
+          <div class="trend-content">
             <h3>Jet Ski Rentals</h3>
-            <p>Get out on Lake Erie and ride your own Sea-Doo for a real Sandusky day.</p>
+            <p>Get out on Lake Erie and ride your own Sea-Doo.</p>
           </div>
         </a>
 
-        <a href="water.html" class="card">
-          <img src="images/boat.PNG" alt="Boat Rentals and Sunset Cruises" />
-          <div class="card-content">
-            <h3>Boat Rentals & Sunset Cruises</h3>
-            <p>Relax, cruise, and catch the best views on the water with your group.</p>
+        <a href="water.html" class="trend-card">
+          <img src="images/boat.PNG" alt="Boat Rentals and Cruises">
+          <div class="trend-content">
+            <h3>Boat Rentals & Cruises</h3>
+            <p>Relax, cruise, and enjoy the sunset.</p>
           </div>
         </a>
       </div>
     </div>
   </section>
-
-  <div class="footer-space"></div>
 
 </body>
 </html>
