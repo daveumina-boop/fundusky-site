@@ -1,1 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Attractions | FUNdusky</title>
 
+<style>
+body { margin:0; font-family:Arial; background:#f5f9ff; }
+.hero {
+  height:55vh;
+  background:url("images/attractions.jpg") center/cover;
+  display:flex; align-items:center; justify-content:center;
+  color:#fff; text-align:center;
+}
+.hero::before {
+  content:""; position:absolute; inset:0;
+  background:rgba(0,0,0,.5);
+}
+.hero h1 { position:relative; font-size:3rem; }
+.container { padding:30px; max-width:900px; margin:auto; }
+.card {
+  background:#fff; border-radius:16px; overflow:hidden;
+  margin-bottom:20px; box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+.card img { height:250px; object-fit:cover; width:100%; }
+.card-content { padding:20px; }
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+  <h1>Attractions</h1>
+</div>
+
+<div class="container">
+<a href="index.html">← Back</a>
+
+<div class="card">
+<img src="images/attractions.jpg">
+<div class="card-content">
+<h2>Cedar Point</h2>
+<p>The roller coaster capital of the world — this is the main event.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="images/attractions.jpg">
+<div class="card-content">
+<h2>Local Experiences</h2>
+<p>Everything else that makes Sandusky worth the trip.</p>
+</div>
+</div>
+
+</div>
+
+</body>
+</html>
