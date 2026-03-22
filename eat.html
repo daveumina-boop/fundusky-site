@@ -1,1 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Where to Eat | FUNdusky</title>
 
+<style>
+body {
+  margin:0;
+  font-family:-apple-system, BlinkMacSystemFont, sans-serif;
+  background:#f5f9ff;
+}
+
+.hero {
+  height:55vh;
+  background:url("images/hero-bg.jpg") center/cover;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  color:white;
+  text-align:center;
+  position:relative;
+}
+
+.hero::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.35);
+}
+
+.hero-content {
+  position:relative;
+  z-index:2;
+}
+
+.hero h1 {
+  font-size:2.8rem;
+  margin:0;
+}
+
+.container {
+  padding:25px;
+  max-width:900px;
+  margin:auto;
+}
+
+.section-title {
+  font-size:2rem;
+  color:#0c2d68;
+  margin-bottom:20px;
+}
+
+.card {
+  background:white;
+  border-radius:20px;
+  overflow:hidden;
+  margin-bottom:25px;
+  box-shadow:0 12px 30px rgba(0,0,0,.12);
+}
+
+.card img {
+  width:100%;
+  height:220px;
+  object-fit:cover;
+}
+
+.card-content {
+  padding:20px;
+}
+
+.card h3 {
+  margin:0 0 10px 0;
+  font-size:1.5rem;
+}
+
+.card p {
+  margin:0;
+  color:#555;
+}
+
+.button {
+  display:inline-block;
+  background:#f29a38;
+  color:white;
+  padding:14px 26px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:bold;
+  margin-top:15px;
+}
+
+.cta {
+  text-align:center;
+  margin:50px 0;
+}
+
+.signup {
+  background:#0c2d68;
+  color:white;
+  padding:30px;
+  border-radius:20px;
+  text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-content">
+    <h1>Where to Eat</h1>
+    <p>Real spots. Real food. No guessing.</p>
+  </div>
+</div>
+
+<div class="container">
+
+<a href="index.html">← Back to Home</a>
+
+<h2 class="section-title">Featured Restaurants</h2>
+
+<!-- THIRSTY PONY -->
+<div class="card">
+  <img src="images/thirstypony-bar.jpg">
+  <div class="card-content">
+    <h3>Thirsty Pony</h3>
+    <p>Massive sports bar, wings, drinks, and always something going on.</p>
+  </div>
+</div>
+
+<div class="card">
+  <img src="images/thirstypony-wings.jpg">
+</div>
+
+<!-- THE CLUB -->
+<div class="card">
+  <img src="images/club-outside.jpg">
+  <div class="card-content">
+    <h3>The Club</h3>
+    <p>One of Sandusky’s go-to spots for great food and a strong local vibe.</p>
+  </div>
+</div>
+
+<div class="card">
+  <img src="images/club-food.jpg">
+</div>
+
+<!-- PATRON -->
+<div class="card">
+  <img src="images/patron-interior.jpg">
+  <div class="card-content">
+    <h3>El Patrón</h3>
+    <p>Colorful, authentic Mexican food with big portions and strong margaritas.</p>
+  </div>
+</div>
+
+<div class="card">
+  <img src="images/patron-food.jpg">
+</div>
+
+<!-- CTA -->
+<div class="cta">
+  <h2>Order Food Coming Soon</h2>
+  <a href="#" class="button">Get Notified</a>
+</div>
+
+<!-- SIGNUP -->
+<div class="signup">
+  <h2>Own a Restaurant?</h2>
+  <p>Get featured on FUNdusky and be seen by thousands of visitors.</p>
+  <br>
+  <a href="#" class="button">Get Featured</a>
+</div>
+
+</div>
+
+</body>
+</html>
