@@ -18,74 +18,59 @@
       color: inherit;
     }
 
-   .hero {
-  position: relative;
-  height: 75vh;
-  background: linear-gradient(to top, rgba(0,0,0,0.65), rgba(0,0,0,0.2)),
-              url("images/hero-bg.jpg") center/cover no-repeat;
-  display: flex;
-  align-items: flex-end;
-  padding: 30px 20px;
-  color: white;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 700px;
-}
-
-.logo {
-  width: 120px;
-  margin-bottom: 15px;
-  display: block;
-}
-    }
-
-    .hero::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(0,0,0,0.65), transparent);
+    /* HERO */
+    .hero {
+      position: relative;
+      height: 75vh;
+      background: linear-gradient(to top, rgba(0,0,0,0.65), rgba(0,0,0,0.2)),
+                  url("images/hero-bg.jpg") center/cover no-repeat;
+      display: flex;
+      align-items: flex-end;
+      padding: 30px 20px;
+      color: white;
     }
 
     .hero-content {
       position: relative;
       z-index: 2;
+      max-width: 700px;
     }
 
     .logo {
-      width: 140px;
+      width: 120px;
       margin-bottom: 15px;
       display: block;
     }
 
     .hero h1 {
-      font-size: 38px;
+      font-size: 42px;
       margin: 0;
     }
 
     .hero p {
       font-size: 18px;
       margin-top: 10px;
+      line-height: 1.5;
     }
 
+    /* SECTION */
     .section {
       padding: 20px;
     }
 
+    /* CARDS */
     .card {
       position: relative;
-      border-radius: 22px;
+      border-radius: 20px;
       overflow: hidden;
       margin-bottom: 25px;
+      box-shadow: 0 10px 25px rgba(0,0,0,.08);
     }
 
     .card img {
       width: 100%;
-      height: 260px;
+      height: 240px;
       object-fit: cover;
-      object-position: center;
       display: block;
     }
 
@@ -94,25 +79,26 @@
       bottom: 0;
       left: 0;
       right: 0;
-      padding: 20px;
+      padding: 18px;
       color: white;
-      background: linear-gradient(to top, rgba(0,0,0,0.75), transparent);
+      background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
     }
 
     .card h2 {
       margin: 0;
-      font-size: 26px;
+      font-size: 24px;
     }
 
     .card p {
       margin-top: 5px;
-      font-size: 15px;
+      font-size: 14px;
     }
   </style>
 </head>
 
 <body>
 
+  <!-- HERO -->
   <div class="hero">
     <div class="hero-content">
       <img src="images/fundusky-logo.png" class="logo" alt="FUNdusky logo" />
@@ -121,54 +107,56 @@
     </div>
   </div>
 
+  <!-- CARDS -->
   <div class="section">
 
-    <a href="eat.html">
+    <!-- ON THE WATER (put this FIRST) -->
+    <a href="water.html">
       <div class="card">
-        <img src="images/thirstypony-wings.jpg?v=3" alt="Where to Eat" />
+        <img src="images/boat.PNG?v=5" alt="On the Water">
         <div class="card-overlay">
-          <h2>Where to Eat</h2>
-          <p>Local favorites, real food picks, and restaurants worth recommending.</p>
+          <h2>On the Water</h2>
+          <p>Jet skis, boats, and sunset cruises on Sandusky Bay.</p>
         </div>
       </div>
     </a>
 
-    <a href="water.html">
+    <a href="eat.html">
       <div class="card">
-        <img src="images/boat.PNG?v=3" alt="On the Water" />
+        <img src="images/club-food.jpg" alt="Where to Eat">
         <div class="card-overlay">
-          <h2>On the Water</h2>
-          <p>Jet skis, boats, and sunset cruises in Sandusky Bay.</p>
+          <h2>Where to Eat</h2>
+          <p>Local favorites and must-try spots.</p>
         </div>
       </div>
     </a>
 
     <a href="stay.html">
       <div class="card">
-        <img src="images/stay-holidayinn-exterior.jpg?v=3" alt="Places to Stay" />
+        <img src="images/club-outside.jpg" alt="Places to Stay">
         <div class="card-overlay">
           <h2>Places to Stay</h2>
-          <p>Hotels, waterfront stays, and places to crash after a full day.</p>
+          <p>Hotels and waterfront stays.</p>
         </div>
       </div>
     </a>
 
     <a href="family.html">
       <div class="card">
-        <img src="images/family.jpg?v=3" alt="Family Fun" />
+        <img src="images/attractions.jpg" alt="Family Fun">
         <div class="card-overlay">
           <h2>Family</h2>
-          <p>Things to do with kids, groups, and weekend trips.</p>
+          <p>Things to do with kids and groups.</p>
         </div>
       </div>
     </a>
 
     <a href="nightlife.html">
       <div class="card">
-        <img src="images/nightlife.jpg?v=3" alt="Nightlife" />
+        <img src="images/club-food.jpg" alt="Nightlife">
         <div class="card-overlay">
           <h2>Nightlife</h2>
-          <p>Bars, drinks, and late-night energy in Sandusky.</p>
+          <p>Bars, drinks, and late-night spots.</p>
         </div>
       </div>
     </a>
