@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Sandusky Picks</title>
+<title>Erie Wake Zone</title>
 
 <style>
 body {
@@ -13,134 +13,62 @@ body {
   color: #1f2c4c;
 }
 
-a {
-  text-decoration: none;
-}
-
 .hero {
-  position: relative;
-  height: 70vh;
-  background: url('images/hero-bg.jpg') center/cover no-repeat;
+  height: 60vh;
+  background: url('images/erie-wakezone-hero.jpg') center/cover no-repeat;
   display: flex;
   align-items: flex-end;
-  padding: 30px;
+  padding: 20px;
   color: white;
-}
-
-.hero::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
 }
 
 .hero h1 {
-  font-size: 42px;
   margin: 0;
-}
-
-.hero p {
-  font-size: 18px;
-  margin-top: 10px;
+  font-size: 34px;
 }
 
 .section {
-  padding: 30px 20px;
+  padding: 25px;
 }
 
-.card {
-  position: relative;
-  border-radius: 20px;
-  overflow: hidden;
-  margin-bottom: 25px;
+.button {
+  display: inline-block;
+  padding: 14px 22px;
+  border-radius: 12px;
+  margin: 10px 10px 0 0;
+  font-weight: 600;
 }
 
-.card img {
-  width: 100%;
-  height: 240px;
-  object-fit: cover;
-}
-
-.card-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 20px;
+.book {
+  background: #3aa35c;
   color: white;
-  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
 }
 
-.card h2 {
-  margin: 0;
-  font-size: 26px;
-}
-
-.card p {
-  margin-top: 5px;
-  font-size: 15px;
+.back {
+  display: block;
+  margin: 15px;
+  color: #6a6a6a;
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
+<a class="back" href="index.html">← Back</a>
+
 <div class="hero">
-  <div class="hero-content">
-    <h1>Sandusky Picks</h1>
-    <p>The best food, stays, and things to do in Sandusky Bay.</p>
-  </div>
+  <h1>Erie Wake Zone</h1>
 </div>
 
-<!-- WHERE TO EAT -->
 <div class="section">
-  <a href="eat.html">
-    <div class="card">
-      <img src="images/thirstypony-wings.jpg" alt="Wings" />
-      <div class="card-overlay">
-        <h2>Where to Eat</h2>
-        <p>Local favorites, real food picks, and restaurants worth recommending.</p>
-      </div>
-    </div>
-  </a>
+  <h2>Ride. Cruise. Explore.</h2>
+  <p>
+    Jet skis, boat rentals, and sunset cruises in Sandusky Bay.
+    Whether you want speed or a laid-back cruise, this is where the water experience starts.
+  </p>
 
-  <!-- ON THE WATER -->
-  <a href="erie-wake-zone.html">
-    <div class="card">
-      <img src="images/erie-wakezone-hero.jpg" alt="Water" />
-      <div class="card-overlay">
-        <h2>On the Water</h2>
-        <p>Jet skis, boats, and sunset cruises in Sandusky Bay.</p>
-      </div>
-    </div>
-  </a>
-
-  <!-- FAMILY -->
-  <a href="family.html">
-    <div class="card">
-      <img src="images/family.jpg" alt="Family" />
-      <div class="card-overlay">
-        <h2>Family</h2>
-        <p>Things to do with kids, groups, and weekend trips.</p>
-      </div>
-    </div>
-  </a>
-
-  <!-- NIGHTLIFE -->
-  <a href="nightlife.html">
-    <div class="card">
-      <img src="images/nightlife.jpg" alt="Nightlife" />
-      <div class="card-overlay">
-        <h2>Nightlife</h2>
-        <p>Bars, drinks, and late-night energy in Sandusky.</p>
-      </div>
-    </div>
+  <a class="button book" href="https://erie-wake-zone.manage.na1.bookingplatform.app/reserve/" target="_blank">
+    Book Now
   </a>
 </div>
 
