@@ -20,7 +20,7 @@
 
     .hero {
       position: relative;
-      height: 60vh;
+      height: 55vh;
       background: linear-gradient(to top, rgba(0,0,0,0.65), rgba(0,0,0,0.25)),
                   url("images/hero-bg.jpg") center/cover no-repeat;
       color: white;
@@ -58,7 +58,7 @@
 
     .section {
       padding: 0 20px 20px;
-      margin-top: -30px;
+      margin-top: -50px;
       position: relative;
       z-index: 2;
     }
@@ -99,6 +99,37 @@
       font-size: 14px;
       line-height: 1.4;
     }
+
+    .featured-card img {
+      height: 300px;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        height: 52vh;
+        padding-top: 60px;
+      }
+
+      .logo {
+        width: 135px;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .section {
+        margin-top: -40px;
+      }
+
+      .featured-card img {
+        height: 270px;
+      }
+    }
   </style>
 </head>
 
@@ -115,8 +146,8 @@
   <div class="section">
 
     <a href="water.html">
-      <div class="card">
-        <img src="images/boat.PNG?v=12" alt="On the Water">
+      <div class="card featured-card">
+        <img src="images/boat.PNG?v=13" alt="On the Water">
         <div class="card-overlay">
           <h2>On the Water</h2>
           <p>Jet skis, boats, and sunset cruises on Sandusky Bay.</p>
