@@ -1,1 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thirsty Pony | FUNdusky</title>
 
+<style>
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  background: #f5f9ff;
+}
+
+.hero {
+  height: 50vh;
+  background: url("images/thirstypony-bar.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.35);
+}
+
+.hero h1 {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 35px;
+  font-size: 3rem;
+}
+
+.container {
+  padding: 25px;
+  max-width: 950px;
+  margin: auto;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #4b2a7a;
+  font-weight: bold;
+}
+
+.card {
+  background: white;
+  border-radius: 22px;
+  overflow: hidden;
+  margin-bottom: 25px;
+  box-shadow: 0 12px 30px rgba(0,0,0,.12);
+}
+
+.card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 22px;
+}
+
+.card h2 {
+  margin: 0 0 10px;
+  color: #0c2d68;
+}
+
+.card p {
+  margin: 0;
+  color: #555;
+  line-height: 1.6;
+}
+
+.button-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
+.button {
+  display: inline-block;
+  background: #f29a38;
+  color: white;
+  padding: 14px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.button.secondary {
+  background: #0c2d68;
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+  <h1>Thirsty Pony</h1>
+</div>
+
+<div class="container">
+
+  <a href="eat.html" class="back-link">← Back to Restaurants</a>
+
+  <div class="card">
+    <img src="images/thirstypony-wings.jpg" alt="Thirsty Pony wings">
+    <div class="card-content">
+      <h2>Start with the Wings</h2>
+      <p>Big flavors, sports bar energy, and one of Sandusky’s best-known casual food spots.</p>
+      <div class="button-row">
+        <a href="#" class="button">Directions</a>
+        <a href="#" class="button secondary">Call</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="images/thirstypony-bar.jpg" alt="Thirsty Pony bar">
+    <div class="card-content">
+      <h2>Watch the Game. Grab a Drink.</h2>
+      <p>Massive screens, drinks, wings, and a strong local hangout vibe make this an easy stop for visitors.</p>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
