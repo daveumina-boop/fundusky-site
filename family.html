@@ -4,256 +4,174 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Family Fun | FUNdusky</title>
-  <meta name="description" content="Family fun in Sandusky including Ghostly Manor, go-karts, mini golf, Cedar Corner bowling, and axe throwing at Thirsty Pony." />
+
   <style>
-    :root {
-      --navy: #1f2c4c;
-      --bg: #f5f7fb;
-      --text: #1f2c4c;
-      --muted: #5f6b7a;
-      --shadow: 0 12px 28px rgba(0,0,0,.10);
-      --radius: 22px;
-      --orange: #f29a38;
-      --orange-dark: #de8521;
-    }
-
-    * { box-sizing: border-box; }
-
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
+      background: #f5f7fb;
+      color: #1f2c4c;
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    img {
-      width: 100%;
-      display: block;
-    }
+    a { text-decoration: none; color: inherit; }
 
     .hero {
-      min-height: 56vh;
-      background:
-        linear-gradient(to top, rgba(0,0,0,.60), rgba(0,0,0,.18)),
-        url("images/family.jpg") center/cover no-repeat;
+      height: 60vh;
+      background: linear-gradient(to top, rgba(0,0,0,.6), rgba(0,0,0,.2)),
+                  url("images/family.jpg") center/cover no-repeat;
       display: flex;
       align-items: end;
-      padding: 28px;
+      padding: 30px;
       color: white;
     }
 
-    .hero-content {
-      max-width: 760px;
-    }
-
     .hero h1 {
-      margin: 0 0 10px;
-      font-size: clamp(2.6rem, 7vw, 4.8rem);
-      line-height: .95;
-      font-weight: 800;
+      font-size: 42px;
+      margin: 0;
     }
 
     .hero p {
-      margin: 0;
-      font-size: clamp(1rem, 2.6vw, 1.15rem);
-      line-height: 1.55;
-      color: rgba(255,255,255,.95);
+      margin-top: 10px;
+      max-width: 500px;
     }
 
     .container {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 28px 20px 70px;
+      max-width: 900px;
+      margin: auto;
+      padding: 30px 20px 60px;
     }
 
     .back {
       display: inline-block;
-      margin-bottom: 24px;
-      color: #4b2a7a;
-      font-weight: 700;
-      font-size: 1.05rem;
+      margin-bottom: 20px;
+      color: #5a2ca0;
+      font-weight: bold;
     }
 
-    .intro {
+    .section-title {
       text-align: center;
-      margin-bottom: 32px;
-    }
-
-    .intro h2 {
-      margin: 0 0 10px;
-      font-size: clamp(2rem, 5vw, 3rem);
-      color: var(--navy);
-    }
-
-    .intro p {
-      margin: 0 auto;
-      max-width: 760px;
-      color: var(--muted);
-      line-height: 1.65;
-      font-size: 1.03rem;
+      margin-bottom: 30px;
     }
 
     .card {
       background: white;
-      border-radius: var(--radius);
+      border-radius: 20px;
       overflow: hidden;
-      box-shadow: var(--shadow);
-      margin-bottom: 28px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 25px rgba(0,0,0,.08);
     }
 
     .card img {
-      height: 270px;
+      width: 100%;
+      height: 240px;
       object-fit: cover;
     }
 
     .card-content {
-      padding: 24px;
-    }
-
-    .card h2 {
-      margin: 0 0 12px;
-      font-size: clamp(1.8rem, 4vw, 2.5rem);
-      color: var(--navy);
-    }
-
-    .card p {
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.7;
-      font-size: 1.02rem;
+      padding: 20px;
     }
 
     .tag {
       display: inline-block;
-      margin-bottom: 12px;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: #eef2ff;
-      color: var(--navy);
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: .2px;
+      background: #eef1f7;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      margin-bottom: 10px;
     }
 
-    .note-box {
-      margin-top: 34px;
-      background: white;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 26px;
-    }
-
-    .note-box h3 {
-      margin: 0 0 10px;
-      color: var(--navy);
-      font-size: 1.7rem;
-    }
-
-    .note-box p {
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.65;
-    }
-
-    .cta {
-      margin-top: 16px;
+    h2 {
+      margin: 10px 0;
     }
 
     .btn {
       display: inline-block;
-      background: var(--orange);
+      margin-top: 15px;
+      background: #f29a38;
       color: white;
-      font-weight: 800;
-      padding: 14px 22px;
-      border-radius: 999px;
-    }
-
-    .btn:hover {
-      background: var(--orange-dark);
+      padding: 12px 20px;
+      border-radius: 25px;
+      font-weight: bold;
     }
   </style>
 </head>
+
 <body>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Family Fun</h1>
-      <p>Bowling, arcades, go-karts, mini golf, and indoor fun for families, kids, and groups in Sandusky.</p>
-    </div>
-  </section>
+<!-- HERO -->
+<div class="hero">
+  <div>
+    <h1>Family Fun</h1>
+    <p>Bowling, arcades, go-karts, mini golf, and indoor fun for families, kids, and groups in Sandusky.</p>
+  </div>
+</div>
 
-  <div class="container">
-    <a href="index.html" class="back">← Back to Home</a>
+<div class="container">
 
-    <div class="intro">
-      <h2>More than one thing to do</h2>
+  <a href="index.html" class="back">← Back to Home</a>
+
+  <div class="section-title">
+    <h2>More than one thing to do</h2>
+    <p>This page helps you quickly find the best family-friendly spots in Sandusky.</p>
+  </div>
+
+  <!-- GHOSTLY MANOR -->
+  <div class="card">
+    <img src="images/family.jpg" alt="Ghostly Manor">
+    <div class="card-content">
+      <div class="tag">Indoor Favorite</div>
+      <h2>Ghostly Manor</h2>
       <p>
-        This page should help people quickly see the real family-friendly spots worth checking out in Sandusky.
+        One of Sandusky’s easiest all-in-one family stops. Perfect for indoor fun,
+        group activities, and days when the weather doesn’t cooperate.
       </p>
-    </div>
-
-    <div class="card">
-      <img src="images/family.jpg" alt="Ghostly Manor family fun">
-      <div class="card-content">
-        <div class="tag">Indoor Favorite</div>
-        <h2>Ghostly Manor</h2>
-        <p>
-          One of Sandusky’s easiest all-in-one family stops. Great when you want indoor fun, a group activity, or something that works even when the weather does not.
-        </p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="images/attractions.jpg" alt="Go-Karts and Mini Golf">
-      <div class="card-content">
-        <div class="tag">Fast & Competitive</div>
-        <h2>Go-Karts & Mini Golf</h2>
-        <p>
-          Fast, competitive, and easy for families to say yes to. Great for kids, parents, and groups that want something active without needing a full-day commitment.
-        </p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="images/family.jpg" alt="Bowling at Cedar Corner">
-      <div class="card-content">
-        <div class="tag">Reserve Lanes</div>
-        <h2>Cedar Corner Bowling</h2>
-        <p>
-          A strong family and group option in Sandusky when you want something easy, fun, and indoors. Great for rainy days, mixed-age groups, and classic bowling nights.
-        </p>
-        <div class="cta">
-          <a href="https://cedarcorner.com/lane-reservations/" target="_blank" rel="noopener noreferrer" class="btn">Reserve a Lane</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="images/thirstypony-bar.jpg" alt="Axe throwing at Thirsty Pony">
-      <div class="card-content">
-        <div class="tag">Inside Thirsty Pony</div>
-        <h2>Axe Throwing at Thirsty Pony</h2>
-        <p>
-          A fun add for older kids, parents, and mixed-age groups who want something competitive and different. Since it is inside Thirsty Pony, it also works well as a food-and-fun stop instead of just a single activity.
-        </p>
-      </div>
-    </div>
-
-    <div class="note-box">
-      <h3>Still room to build this out</h3>
-      <p>
-        Once you decide the exact go-kart venue, we can tighten this page even more and make it feel fully local instead of broad.
-      </p>
-      <div class="cta">
-        <a href="index.html" class="btn">Back to FUNdusky</a>
-      </div>
     </div>
   </div>
+
+  <!-- GOOFY GOLF -->
+  <div class="card">
+    <img src="images/goofy-golf.jpg" alt="Goofy Golf">
+    <div class="card-content">
+      <div class="tag">Mini Golf + Go-Karts</div>
+      <h2>Goofy Golf</h2>
+      <p>
+        A Sandusky classic with mini golf, go-karts, and arcade-style fun.
+        Great for kids, parents, and groups looking for something active.
+      </p>
+      <a href="https://goofy-golf.com" target="_blank" class="btn">Visit</a>
+    </div>
+  </div>
+
+  <!-- CEDAR CORNER -->
+  <div class="card">
+    <img src="images/club-outside.jpg" alt="Cedar Corner Bowling">
+    <div class="card-content">
+      <div class="tag">Bowling</div>
+      <h2>Cedar Corner Bowling</h2>
+      <p>
+        A strong family and group option for indoor fun. Great for rainy days,
+        mixed-age groups, and classic bowling nights.
+      </p>
+      <a href="https://cedarcorner.com/lane-reservations/" target="_blank" class="btn">
+        Reserve a Lane
+      </a>
+    </div>
+  </div>
+
+  <!-- THIRSTY PONY -->
+  <div class="card">
+    <img src="images/thirstypony-bar.jpg" alt="Thirsty Pony">
+    <div class="card-content">
+      <div class="tag">Arcade • Axe Throwing • Bowling</div>
+      <h2>Thirsty Pony</h2>
+      <p>
+        A full entertainment stop with arcade games, bowling, and axe throwing.
+        Good for families during the day and groups at night.
+      </p>
+    </div>
+  </div>
+
+</div>
 
 </body>
 </html>
