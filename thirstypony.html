@@ -4,12 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Thirsty Pony | FUNdusky</title>
-  <meta name="description" content="Thirsty Pony in Sandusky." />
+  <meta name="description" content="Thirsty Pony in Sandusky — wings, drinks, sports bar energy, and online ordering." />
   <style>
     :root {
       --navy: #0c2d68;
       --orange: #f29a38;
       --orange-dark: #de8521;
+      --green: #27ae60;
+      --green-dark: #1f8a4c;
       --bg: #f5f9ff;
       --text: #1c2333;
       --muted: #5f6b7a;
@@ -37,24 +39,46 @@
     }
 
     .hero {
-      min-height: 52vh;
+      min-height: 54vh;
       background:
-        linear-gradient(to bottom, rgba(0,0,0,.18), rgba(0,0,0,.45)),
+        linear-gradient(to bottom, rgba(0,0,0,.20), rgba(0,0,0,.50)),
         url("images/thirstypony-bar.jpg") center/cover no-repeat;
       display: flex;
       align-items: end;
       justify-content: center;
       text-align: center;
       color: white;
-      padding: 24px 18px 34px;
+      padding: 24px 18px 36px;
+    }
+
+    .hero-content {
+      max-width: 760px;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      background: rgba(255,255,255,.14);
+      border: 1px solid rgba(255,255,255,.32);
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 14px;
+      backdrop-filter: blur(4px);
     }
 
     .hero h1 {
-      margin: 0;
-      font-size: clamp(2.5rem, 7vw, 4.4rem);
+      margin: 0 0 10px;
+      font-size: clamp(2.5rem, 7vw, 4.5rem);
       line-height: .96;
       font-weight: 800;
       text-shadow: 0 6px 20px rgba(0,0,0,.22);
+    }
+
+    .hero p {
+      margin: 0;
+      font-size: clamp(1rem, 2.5vw, 1.15rem);
+      color: rgba(255,255,255,.95);
     }
 
     .container {
@@ -68,6 +92,23 @@
       margin-bottom: 22px;
       color: #4b2a7a;
       font-weight: 700;
+      font-size: 1.05rem;
+    }
+
+    .intro {
+      margin-bottom: 24px;
+    }
+
+    .intro h2 {
+      margin: 0 0 8px;
+      color: var(--navy);
+      font-size: clamp(2rem, 5vw, 3rem);
+    }
+
+    .intro p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
       font-size: 1.05rem;
     }
 
@@ -88,7 +129,7 @@
       padding: 24px;
     }
 
-    .card h2 {
+    .card h3 {
       margin: 0 0 10px;
       color: var(--navy);
       font-size: 1.9rem;
@@ -117,41 +158,68 @@
       font-weight: 800;
     }
 
+    .button:hover {
+      background: var(--orange-dark);
+    }
+
     .button.secondary {
       background: var(--navy);
+    }
+
+    .button.order {
+      background: var(--green);
+    }
+
+    .button.order:hover {
+      background: var(--green-dark);
+    }
+
+    .mini-note {
+      margin-top: 16px;
+      font-size: .95rem;
+      color: var(--muted);
     }
   </style>
 </head>
 <body>
 
   <section class="hero">
-    <h1>Thirsty Pony</h1>
+    <div class="hero-content">
+      <div class="hero-tag">Featured on FUNdusky</div>
+      <h1>Thirsty Pony</h1>
+      <p>Big bar energy, wings, drinks, and one of Sandusky’s best-known hangouts.</p>
+    </div>
   </section>
 
   <div class="container">
     <a href="eat.html" class="back-link">← Back to Restaurants</a>
 
+    <div class="intro">
+      <h2>Start with the wings.</h2>
+      <p>Thirsty Pony is the kind of place visitors remember — casual, loud in the right way, and easy to recommend when someone wants food, drinks, and atmosphere in one stop.</p>
+    </div>
+
     <div class="card">
-      <img src="images/thirstypony-wings.jpg" alt="Thirsty Pony wings" />
+      <img src="images/thirstypony-wings.jpg" alt="Thirsty Pony wings">
       <div class="card-content">
-        <h2>Start with the Wings</h2>
-        <p>
-          Big flavor, sports bar energy, and one of Sandusky’s best-known casual food spots. This is the kind of place people remember after a long day out.
-        </p>
+        <h3>Food Worth the Stop</h3>
+        <p>Wings, sports bar favorites, and the kind of menu that works whether you’re coming off the lake, Cedar Point, or just looking for a solid local spot.</p>
+
         <div class="button-row">
-          <a href="#" class="button">Directions</a>
-          <a href="#" class="button secondary">Call</a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Thirsty+Pony+Sandusky+Ohio" target="_blank" class="button">Directions</a>
+          <a href="tel:+14196275228" class="button secondary">Call</a>
+          <a href="https://slicelife.com/restaurants/oh/sandusky/44870/thirsty-pony/menu?utm_campaign=google-order-action-link&rwg_token=AFd1xnHdE9QsrJWk4WHCPoJD8y2cPNFgIYgnhVBGruRcJYW9qNN6Z6OK3P8zgHasRvoh0siDX95caL8BYEl--5L82NeI-7krJg%3D%3D" target="_blank" class="button order">Order</a>
         </div>
+
+        <div class="mini-note">Online ordering opens in a new tab.</div>
       </div>
     </div>
 
     <div class="card">
-      <img src="images/thirstypony-bar.jpg" alt="Thirsty Pony bar" />
+      <img src="images/thirstypony-bar.jpg" alt="Thirsty Pony bar">
       <div class="card-content">
-        <h2>Watch the Game. Grab a Drink.</h2>
-        <p>
-          Massive screens, drinks, and a high-energy atmosphere make Thirsty Pony a strong stop for visitors who want food and action in one place.
-        </p>
+        <h3>More Than Just a Bar</h3>
+        <p>Big screens, drinks, and a strong local crowd make Thirsty Pony an easy recommendation for visitors who want a place with energy instead of guesswork.</p>
       </div>
     </div>
   </div>
