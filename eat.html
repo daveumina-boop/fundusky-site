@@ -1,172 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Where to Eat | FUNdusky</title>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Club | FUNdusky</title>
+  <meta name="description" content="The Club in Sandusky — food, atmosphere, and reservations." />
   <style>
+    :root {
+      --navy: #0c2d68;
+      --orange: #f29a38;
+      --orange-dark: #de8521;
+      --purple: #5a33a2;
+      --purple-dark: #472781;
+      --bg: #f5f7fb;
+      --text: #1c2333;
+      --muted: #5f6b7a;
+      --shadow: 0 10px 28px rgba(0,0,0,0.10);
+      --radius: 20px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f5f7fb;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      width: 100%;
+      display: block;
     }
 
     .hero {
-      position: relative;
-      height: 300px;
-      background: url('images/hero-bg.jpg') center/cover no-repeat;
+      min-height: 52vh;
+      background:
+        linear-gradient(to bottom, rgba(0,0,0,0.18), rgba(0,0,0,0.5)),
+        url("images/club-outside.jpg") center/cover no-repeat;
       display: flex;
-      align-items: center;
+      align-items: end;
       justify-content: center;
       text-align: center;
       color: white;
+      padding: 24px 18px 36px;
+    }
+
+    .hero-content {
+      max-width: 760px;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.32);
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 14px;
     }
 
     .hero h1 {
-      font-size: 40px;
-      margin-bottom: 10px;
+      margin: 0 0 10px;
+      font-size: clamp(2.6rem, 7vw, 4.5rem);
+      line-height: 0.96;
+      font-weight: 800;
+      text-shadow: 0 6px 20px rgba(0,0,0,0.22);
     }
 
     .hero p {
-      font-size: 18px;
-      opacity: 0.9;
+      margin: 0;
+      font-size: clamp(1rem, 2.5vw, 1.15rem);
+      color: rgba(255,255,255,0.96);
     }
 
     .container {
-      padding: 20px;
+      width: min(calc(100% - 32px), 980px);
+      margin: 0 auto;
+      padding: 28px 0 70px;
     }
 
     .back {
-      margin-bottom: 20px;
       display: inline-block;
-      color: #2d3e75;
-      text-decoration: none;
+      margin-bottom: 22px;
+      color: #4b2a7a;
       font-weight: bold;
+      font-size: 1.05rem;
     }
 
-    .section-title {
-      font-size: 28px;
-      margin-bottom: 20px;
-      color: #1e2b50;
+    .intro {
+      margin-bottom: 24px;
+    }
+
+    .intro h2 {
+      margin: 0 0 8px;
+      color: var(--navy);
+      font-size: clamp(2rem, 5vw, 3rem);
+    }
+
+    .intro p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 1.05rem;
     }
 
     .card {
       background: white;
-      border-radius: 16px;
+      border-radius: var(--radius);
       overflow: hidden;
-      margin-bottom: 20px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-      transition: transform 0.2s ease;
-    }
-
-    .card:hover {
-      transform: scale(1.02);
+      box-shadow: var(--shadow);
+      margin-bottom: 24px;
     }
 
     .card img {
-      width: 100%;
-      height: 200px;
+      height: 280px;
       object-fit: cover;
     }
 
     .card-content {
-      padding: 16px;
+      padding: 24px;
     }
 
-    .card h2 {
-      margin: 0 0 8px;
-      font-size: 22px;
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 1.8rem;
+      color: var(--navy);
     }
 
     .card p {
       margin: 0;
-      color: #666;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 1.04rem;
     }
 
-    .cta {
-      text-align: center;
-      margin-top: 40px;
+    .button-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 20px;
     }
 
-    .cta h2 {
-      margin-bottom: 10px;
-    }
-
-    .btn {
+    .button {
       display: inline-block;
-      padding: 12px 24px;
-      background: #d8964a;
-      color: white;
-      border-radius: 30px;
-      text-decoration: none;
+      padding: 14px 24px;
+      border-radius: 999px;
       font-weight: bold;
-    }
-
-    .footer-box {
-      background: #1e2b50;
       color: white;
-      padding: 30px;
-      border-radius: 20px;
-      text-align: center;
-      margin-top: 40px;
     }
 
-    .footer-box .btn {
-      margin-top: 15px;
+    .button.primary {
+      background: var(--orange);
+    }
+
+    .button.primary:hover {
+      background: var(--orange-dark);
+    }
+
+    .button.secondary {
+      background: var(--navy);
+    }
+
+    .button.reserve {
+      background: var(--purple);
+    }
+
+    .button.reserve:hover {
+      background: var(--purple-dark);
+    }
+
+    .note {
+      margin-top: 14px;
+      font-size: 0.95rem;
+      color: var(--muted);
     }
   </style>
 </head>
-
 <body>
 
-  <!-- HERO -->
-  <div class="hero">
-    <div>
-      <h1>Where to Eat</h1>
-      <p>Real spots. Real food. No guessing.</p>
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-tag">Featured on FUNdusky</div>
+      <h1>The Club</h1>
+      <p>A Sandusky staple with strong food, atmosphere, and reservations available.</p>
     </div>
-  </div>
+  </section>
 
   <div class="container">
+    <a href="eat.html" class="back">← Back to Restaurants</a>
 
-    <a href="index.html" class="back">← Back to Home</a>
-
-    <h2 class="section-title">Featured Restaurants</h2>
-
-    <!-- THIRSTY PONY -->
-    <a href="thirstypony.html" style="text-decoration:none; color:inherit;">
-      <div class="card">
-        <img src="images/thirstypony-bar.jpg" alt="Thirsty Pony">
-        <div class="card-content">
-          <h2>Thirsty Pony</h2>
-          <p>Famous wings, cold drinks, and a high-energy bar scene.</p>
-        </div>
-      </div>
-    </a>
-
-    <!-- THE CLUB -->
-    <a href="club.html" style="text-decoration:none; color:inherit;">
-      <div class="card">
-        <img src="images/club-outside.jpg" alt="The Club">
-        <div class="card-content">
-          <h2>The Club</h2>
-          <p>One of Sandusky’s go-to spots for great food and a strong local vibe.</p>
-        </div>
-      </div>
-    </a>
-
-    <!-- DELIVERY SECTION -->
-    <div class="cta">
-      <h2>Delivery Coming Soon</h2>
-      <a href="#" class="btn">Get Notified</a>
+    <div class="intro">
+      <h2>Food first.</h2>
+      <p>
+        The Club feels like one of those places you can trust right away — established, recognizable, and easy to recommend when someone wants a strong Sandusky dinner spot.
+      </p>
     </div>
 
-    <!-- RESTAURANT CTA -->
-    <div class="footer-box">
-      <h2>Own a Restaurant?</h2>
-      <p>Get featured on FUNdusky and reach thousands of visitors.</p>
-      <a href="#" class="btn">Get Featured</a>
+    <div class="card">
+      <img src="images/club-food.jpg" alt="The Club food" />
+      <div class="card-content">
+        <h3>Comfort food and a local feel</h3>
+        <p>
+          If you want a more established restaurant experience instead of guessing where to go, this is the kind of place that belongs on the short list.
+        </p>
+
+        <div class="button-row">
+          <a href="https://www.google.com/maps/search/?api=1&query=The+Club+Sandusky+Ohio" target="_blank" class="button primary">Directions</a>
+          <a href="tel:+14196255055" class="button secondary">Call</a>
+          <a href="https://www.google.com/maps/reserve/v/dine/c/5fEsq6nlSus?source=pa&opi=89978449&hl=en-US" target="_blank" class="button reserve">Reserve</a>
+        </div>
+
+        <div class="note">Reservations open in a new tab.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/club-outside.jpg" alt="The Club exterior" />
+      <div class="card-content">
+        <h3>A real Sandusky recommendation</h3>
+        <p>
+          Strong branding, recognizable location, and the kind of spot that helps visitors feel like they found something real instead of random.
+        </p>
+      </div>
     </div>
 
   </div>
